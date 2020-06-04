@@ -4,12 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Created by Michael on 2017/10/28.
+ * @author Administrator
  */
 @SpringBootApplication
 public class CourseDubboServiceApplication {
-
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         SpringApplication.run(CourseDubboServiceApplication.class, args);
     }
 }

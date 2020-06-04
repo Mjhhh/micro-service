@@ -3,7 +3,6 @@ package com.imooc.user.thrift;
 import com.imooc.thrift.message.MessageService;
 import com.imooc.thrift.user.UserService;
 import org.apache.thrift.TServiceClient;
-import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TFramedTransport;
@@ -32,7 +31,9 @@ public class ServiceProvider {
     private int messageServerPort;
 
     private enum ServiceType {
+        /*用户服务*/
         USER,
+        /*消息服务*/
         MESSAGE
     }
 

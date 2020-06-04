@@ -3,8 +3,10 @@ server:
 
 spring:
   dubbo:
-    application.name: course-service
-    registry.address: zookeeper://192.168.1.8:2181
+    application:
+      name: course-service
+    registry:
+      address: zookeeper://101.200.216.3:2181
     scan: com.imooc.course
 
 user:
