@@ -1,4 +1,4 @@
-FROM hub.mooc.com:8080/micro-service/python-base:latest
+FROM python-base:latest
 MAINTAINER xxx xxx@imooc.com
 
 ENV PYTHONPATH /
