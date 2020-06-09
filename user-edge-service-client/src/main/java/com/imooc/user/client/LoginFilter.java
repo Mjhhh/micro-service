@@ -62,7 +62,7 @@ public abstract class LoginFilter implements Filter {
         }
 
         if (userDTO == null) {
-            response.sendRedirect("http://www.mock.com/user/login");
+            response.sendRedirect("http://mjh0523.xyz/user/login");
             return;
         }
 
@@ -77,7 +77,7 @@ public abstract class LoginFilter implements Filter {
 
     private UserDTO requestUserInfo(String token) {
 //        String url = "http://" + userEdgeServiceAddr() + "/user/authentication";
-        String url = "http://www.mock.com/user/authentication";
+        String url = "http://mjh0523.xyz/user/authentication";
 
         HttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);

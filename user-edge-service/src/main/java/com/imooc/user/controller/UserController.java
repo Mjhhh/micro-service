@@ -76,7 +76,6 @@ public class UserController {
         String message = "Verify code is:";
         String code = randomCode("0123456789", 6);
         try {
-
             boolean result = false;
             if(StringUtils.isNotBlank(mobile)) {
                 result = serviceProvider.getMessasgeService().sendMobileMessage(mobile, message+code);

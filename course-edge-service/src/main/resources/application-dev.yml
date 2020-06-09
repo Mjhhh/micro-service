@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  dubbo:
+    application:
+      name: course-service
+    registry:
+      address: zookeeper://101.200.216.3:2181
+    scan: com.imooc.course
+
+user:
+  edge:
+    service:
+      addr: 127.0.0.1:8082
+

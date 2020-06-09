@@ -1,0 +1,19 @@
+service:
+  name: user-thrift-service
+
+#数据源的配置
+spring:
+  datasource:
+    url: jdbc:mysql://${mysql.address}/db_user?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  thrift:
+    #监听的端口
+    port: 7911
+    #线程池最小线程数
+    min-thread-pool: 100
+    #线程池最大线程数
+    max-thread-pool: 1000
+

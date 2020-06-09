@@ -12,7 +12,7 @@ services:
   user-service:
     image: user-service:latest
     command:
-    - "--mysql.address=172.19.0.2"
+    - "--mysql.address=172.24.58.200"
 
   user-edge-service:
     image: user-edge-service:latest
@@ -20,22 +20,22 @@ services:
     - user-service
     - message-service
     command:
-    - "--redis.address=172.19.0.3"
+    - "--redis.address=172.24.58.200"
 
   course-service:
     image: course-service:latest
     links:
     - user-service
     command:
-    - "--mysql.address=172.19.0.2"
-    - "--zookeeper.address=172.19.0.4"
+    - "--mysql.address=172.24.58.200"
+    - "--zookeeper.address=172.24.58.200"
 
   course-edge-service:
     image: course-edge-service:latest
     links:
     - user-edge-service
     command:
-    - "--zookeeper.address=172.19.0.4"
+    - "--zookeeper.address=172.24.58.200"
 
   api-gateway-zuul:
     image: api-gateway-zuul:latest
@@ -43,4 +43,4 @@ services:
     - course-edge-service
     - user-edge-service
     ports:
-    - 8080:8080
+    - 80:80

@@ -1,4 +1,5 @@
-FROM python:3.6
+FROM 101.200.216.3:80/micro-service/python:3.6
+
 MAINTAINER xxx xxx@imooc.com
 
 RUN pip install thrift
